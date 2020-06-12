@@ -1,0 +1,75 @@
+﻿@model ConfigurationModel
+
+@using Nop.Plugin.Shipping.CentralTransport.Models
+
+@{
+    Layout = "_ConfigurePlugin";
+}
+
+<form asp-controller="CentralTransport" asp-action="Configure" method="post">
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <p>
+                    <strong>NOTE:</strong> To use this plugin, you need to
+                    have your IP address whitelisted by the Central Transport
+                    Web Services team. You can find this by using command line
+                    tool <code>ping (your_domain)</code>.
+                </p>
+                
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-label asp-for="AccessCode" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="AccessCode" />
+                        <span asp-validation-for="AccessCode"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-label asp-for="CustomerNumber" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="CustomerNumber" />
+                        <span asp-validation-for="CustomerNumber"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-label asp-for="ShipmentClass" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-select asp-for="ShipmentClass"
+                                    asp-items="Model.AvailableShipmentClasses" />
+                        <span asp-validation-for="ShipmentClass"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-label asp-for="MinimumWeightLimitInLbs" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="MinimumWeightLimitInLbs" />
+                        <span asp-validation-for="MinimumWeightLimitInLbs"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-label asp-for="ShippingOptionName" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="ShippingOptionName" />
+                        <span asp-validation-for="ShippingOptionName"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-9 col-md-offset-3">
+                        <input type="submit" name="save" class="btn bg-blue"
+                               value="@T("Admin.Common.Save")" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

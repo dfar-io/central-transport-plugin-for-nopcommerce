@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Shipping rate computation",
+  "FriendlyName": "Central Transport",
+  "SystemName": "Shipping.CentralTransport",
+  "Version": "1.0.0",
+  "SupportedVersions": [ "4.20" ],
+  "Author": "Dave Farinelli",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Shipping.CentralTransport.dll",
+  "Description": "Integrates with Central Transport to offer shipping rates."
+}
