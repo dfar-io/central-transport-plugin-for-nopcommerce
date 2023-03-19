@@ -1,3 +1,6 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/cdbc919c16b61036b9c7/maintainability)](https://codeclimate.com/github/dfar-io/central-transport-plugin-for-nopcommerce/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/cdbc919c16b61036b9c7/test_coverage)](https://codeclimate.com/github/dfar-io/central-transport-plugin-for-nopcommerce/test_coverage)
+
 # nopCommerce Central Transport plugin
 Integrates nopCommerce with Central Transport to provide rate quotes.
 
